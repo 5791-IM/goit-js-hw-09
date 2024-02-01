@@ -75,7 +75,6 @@ const markup = images
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="${original}"
       alt="${description}"
     />
   </a>
@@ -86,11 +85,7 @@ const markup = images
 gallery.innerHTML = markup;
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
-  captionType: 'attr',
   captionsData: 'alt',
-  captionPosition: 'bottom',
-  fadeSpeed: 150,
   captionSelector: 'img',
   captionDelay: 250,
 });
